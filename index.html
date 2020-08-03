@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>National Collision Database Exploration</title>
+  </head>
+
+
+<style>
+	path { 
+	    stroke: steelblue;
+	    stroke-width: 2;
+	    fill: none;
+	}
+	.axis path,
+	.axis line {
+	    fill: none;
+	    stroke: grey;
+	    stroke-width: 1;
+	    shape-rendering: crispEdges;
+	}
+</style>
+
+
+<body class="bg-dark text-white">
+<script src="https://d3js.org/d3.v3.js"></script>
+
+	
+<div class="container-lg bg-dark text-white">
+      
+	<br><br><br><br><br>
+
+    <h1>Canadian National Collision Database</h1>
+    <hr>
+	<h2>Collision trends in Canada from 1999 through 2017</h2>
+
+    <div class="card bg-light text-dark mb-3">
+    <div class="card-header">Steady decrease in injuries and fatalities</div>
+    	<div id='tosin'>
+    		<script src="tosin.js"></script>
+    	</div>
+
+	</div>
+
+	<br><br><br>
+    <div class="card bg-light text-dark mb-3" style="max-height: 50vh";>
+    <div class="card-header">Overall decrease in reported collisions from 1999 to 2017</div>
+		<div class='tableauPlaceholder' id='viz1595977183440' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NC&#47;NCDB_EDA_v3&#47;Collisionsovertime&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NCDB_EDA_v3&#47;Collisionsovertime' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NC&#47;NCDB_EDA_v3&#47;Collisionsovertime&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1595977183440');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.5)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+	</div>	
+
+	<br><br>
+    <p class="lead">At a glance, this chart demonstrates that the overall number of reported collisions has steadily declined since 1999. It also shows that there are significant seasonal variations in accident rates. </p>
+
+    <p>Can you tell what time of year has the least number of collisions?</p>
+    <br><br>
+    <p>Let's take a look at the weather patterns? Click through the charts to see what catches your eye.</p>
+
+<div class="card bg-light text-dark mb-3" style="max-height: 100vmin";>
+<div class="card-header">Weather Patterns</div>
+	<div class='tableauPlaceholder' id='viz1595977212260' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NC&#47;NCDB_EDA_v3&#47;WeatherStory&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NCDB_EDA_v3&#47;WeatherStory' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NC&#47;NCDB_EDA_v3&#47;WeatherStory&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1595977212260');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+</div>
+
+<p> Did anything catch your eye? Why do March and April consistently have lower numbers of reported collisions?</p>
+<p> Is adverse weather an obvious factor in the total number of collisions in a given month? </p>
+
+
+<p>Take a look at accidents across various road surface conditions. Compare the two charts. Is it more informative to compare total collisions or the ratio of total collisions?
+</p>
+
+<p>Why?</p>
+
+<div class="card bg-light text-dark mb-3">
+<div class="card-header">Road Surface Conditions</div>
+	<div class='tableauPlaceholder' id='viz1595977243848' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NC&#47;NCDB_EDA_v3&#47;RoadSurfaceStory&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NCDB_EDA_v3&#47;RoadSurfaceStory' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NC&#47;NCDB_EDA_v3&#47;RoadSurfaceStory&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1595977243848');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+</div>
+
+<p>Generally, the totalized charts show a consistent decline in accident rates for every month. The second, ratio chart demonstrates that the seather conditions are fairly consistent from month to month, and also point out specific years with especially poor weather conditions.</p>
+
+<br><br><br><br><br><br><br>
+
+<h4>Moving on from the weather, lets take a look at temporal (time-based) patterns</h4>
+
+<div class="card bg-light text-dark mb-3">
+<div class="card-header">Temporal Patterns - Time of Day, Day of Week</div>
+	<div class='tableauPlaceholder' id='viz1595977273332' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NC&#47;NCDB_EDA_v3&#47;HeatmapDash&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NCDB_EDA_v3&#47;HeatmapDash' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NC&#47;NCDB_EDA_v3&#47;HeatmapDash&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1595977273332');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='777px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+</div>
+
+<p>When are the most accidents happening? Is there a specific time of day, or perhaps a specific month that stands out?</p>
+
+<h3>Try taking a look at who's driving</h3>
+
+<div class="card bg-light text-dark mb-3">
+<div class="card-header">Driver patterns by age and sex</div>
+<div class='tableauPlaceholder' id='viz1595977297155' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NC&#47;NCDB_EDA_v3&#47;whosDrivingStory&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NCDB_EDA_v3&#47;whosDrivingStory' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NC&#47;NCDB_EDA_v3&#47;whosDrivingStory&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1595977297155');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+</div>
+
+<p>Do you see a difference in age groups for different types of vehicles?
+
+<h3>Or the types of vehicles?</h3>
+<div class="card bg-light text-dark mb-3">
+<div class="card-header">Vehicle Types</div>
+	<div class='tableauPlaceholder' id='viz1595977321590' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NC&#47;NCDB_EDA_v3&#47;vehicleTypeStory&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NCDB_EDA_v3&#47;vehicleTypeStory' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NC&#47;NCDB_EDA_v3&#47;vehicleTypeStory&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1595977321590');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+</div>
+
+</body>
+</html>
